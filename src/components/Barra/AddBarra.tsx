@@ -34,9 +34,7 @@ const AddBarra: React.FC<AddBarraProps> = ({ addBarra }) => {
    
   };
 
-  return (
-    
-  );
+  return ();
 };
 
 export default connect(null, { addBarra })(AddBarra);
