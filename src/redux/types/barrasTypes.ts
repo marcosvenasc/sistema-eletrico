@@ -1,4 +1,5 @@
 export const ADD_BARRA = 'ADD_BARRA';
+export const EDIT_BARRA = 'EDIT_BARRA';
 export const REMOVE_BARRA = 'REMOVE_BARRA';
 
 export interface Barra {
@@ -15,9 +16,14 @@ export interface AddBarraAction {
   payload: Barra;
 }
 
+export interface EditBarraAction {
+  type: typeof EDIT_BARRA;
+  payload: Barra;
+}
+
 export interface RemoveBarraAction {
   type: typeof REMOVE_BARRA;
   payload: string;
 }
 
-export type BarrasActionTypes = AddBarraAction | RemoveBarraAction;
+export type BarrasActionTypes = AddBarraAction |EditBarraAction | RemoveBarraAction;

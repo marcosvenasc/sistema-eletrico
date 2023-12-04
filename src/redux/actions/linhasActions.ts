@@ -1,7 +1,12 @@
-import { ADD_LINHA, REMOVE_LINHA, Linha, AddLinhaAction, RemoveLinhaAction } from '../types/linhasTypes';
+import { ADD_LINHA, REMOVE_LINHA, EDIT_LINHA, Linha, AddLinhaAction, RemoveLinhaAction, EditLinhaAction } from '../types/linhasTypes';
 
 export const addLinha = (linha: Linha): AddLinhaAction => ({
   type: ADD_LINHA,
+  payload: linha,
+});
+
+export const editLinha = (linha: Linha): EditLinhaAction => ({
+  type: EDIT_LINHA,
   payload: linha,
 });
 

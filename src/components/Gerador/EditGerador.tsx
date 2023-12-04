@@ -26,7 +26,9 @@ const EditGerador: React.FC<EditGeradorProps> = ({ geradores, geradorId, editGer
       numero: numero,
     };
 
-    editGerador(geradorEditada);
+    editGerador(
+      
+      geradorEditada);
     
   };
 

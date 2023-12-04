@@ -3,10 +3,12 @@ export const REMOVE_TRANSFORMADOR = 'REMOVE_TRANSFORMADOR';
 
 export interface Transformador {
   id: string;
+  barraDe: string;
+  barraPara: string;
   numero: number;
 }
 
-export interface TransformadorState {
+export interface TransformadoresState {
   transformadores: Transformador[];
 }
 

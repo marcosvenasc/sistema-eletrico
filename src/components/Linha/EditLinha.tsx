@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { editLinha } from '../../redux/actions/linhasActions';
 import { Linha } from '../../redux/types/linhasTypes';
+import { Barra } from '../../redux/types/barrasTypes';
+
 
 interface EditLinhaProps {
   linhas: Linha[];
@@ -20,9 +22,11 @@ const EditLinha: React.FC<EditLinhaProps> = ({ linhas, linhaId, editLinha }) => 
     }
   }, [linhas, linhaId]);
 
-  const handleEditLinha = () => {
+  const handleEditLinha = (barras: Barra[], linhaId: string, numero: number) => {
     const linhaEditada: Linha = {
       id: linhaId,
+      barraDe: barras[0] as barraDe,  
+      barraPara: barras[1] as barraPara,  
       numero: numero,
     };
 

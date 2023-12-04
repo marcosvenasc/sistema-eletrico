@@ -12,9 +12,15 @@ const AddTransformador: React.FC<AddTransformadorProps> = ({ addTransformador })
   const [barraPara, setBarraPara] = useState<string>('');
   const [numero, setNumero] = useState<number>(0);
 
-  const handleAddTransformador = () => {
-    
+  const gerarId = (): string => {
+    let novoId: string;
+    do {
+      novoId = String(Math.floor(Math.random() * 100) + 1);
+    } while (transformador.some((transformador) => transformador.id === novoId));
+    return novoId;
+  };
 
+  const handleAddTransformador = () => {
     const novoId = gerarId();
 
     const novoTransformador: Transformador = {
@@ -25,6 +31,7 @@ const AddTransformador: React.FC<AddTransformadorProps> = ({ addTransformador })
     };
 
     addTransformador(novoTransformador);
+
     setBarraDe('');
     setBarraPara('');
     setNumero(0);
@@ -44,4 +51,8 @@ const AddTransformador: React.FC<AddTransformadorProps> = ({ addTransformador })
   );
 };
 
-export default connect(null, { addTransformador })(AddTransformador);
+const mapStateToProps = (state: { transformadores: Transformador[] }) => ({
+  transformadores: state.transformadores,
+});
+
+export default connect(mapStateToProps, { addTransformador })(AddTransformador);

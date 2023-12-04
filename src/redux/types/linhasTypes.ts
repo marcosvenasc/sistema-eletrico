@@ -1,6 +1,7 @@
 import { Barra } from "./barrasTypes";
 
 export const ADD_LINHA = 'ADD_LINHA';
+export const EDIT_LINHA = 'EDIT_LINHA';
 export const REMOVE_LINHA = 'REMOVE_LINHA';
 
 export interface Linha {
@@ -19,9 +20,15 @@ export interface AddLinhaAction {
   payload: Linha;
 }
 
+export interface EditLinhaAction {
+  type: typeof EDIT_LINHA;
+  payload: Linha;
+}
+
+
 export interface RemoveLinhaAction {
   type: typeof REMOVE_LINHA;
   payload: string;
 }
 
-export type LinhasActionTypes = AddLinhaAction | RemoveLinhaAction;
+export type LinhasActionTypes = AddLinhaAction  | EditLinhaAction | RemoveLinhaAction;

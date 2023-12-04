@@ -10,7 +10,8 @@ interface AddGeradorProps {
 
 const AddGerador: React.FC<AddGeradorProps> = ({ geradores, addGerador }) => {
   const [numero, setNumero] = useState<number>(0);
-
+  const [novoNome, setNovoNome] = useState<string>('');
+  
   const gerarId = (): string => {
     let novoId: string;
     do {
@@ -25,6 +26,7 @@ const AddGerador: React.FC<AddGeradorProps> = ({ geradores, addGerador }) => {
     const novoGerador: Gerador = {
       id: novoId,
       numero: numero,
+      novoNome: novoNome,
     };
 
     addGerador(novoGerador);
