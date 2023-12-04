@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addBarra } from '../../redux/actions/barrasActions';
-import { Barra } from '../../redux/types/barrasTyes';
+import { Barra } from '../../redux/types/barrasTypes';
 
 interface AddBarraProps {
   barras: Barra[]; 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { removeBarra } from '../../redux/actions/barrasActions';
-import { Barra } from '../../redux/types/barrasTyes';
+import { Barra } from '../../redux/types/barrasTypes';
 
 interface RemoveBarraProps {
   barras: Barra[];
@@ -19,7 +19,7 @@ const RemoveBarra: React.FC<RemoveBarraProps> = ({ barras, removeBarra }) => {
 
   return (
     <div>
-      <label>ID da Barra a ser Removida:</label>
+      <label>Barra a ser Removida:</label>
       <input type="text" value={barraId} onChange={(e) => setBarraId(e.target.value)} />
       <button onClick={handleRemoveBarra}>Remover Barra</button>
     </div>

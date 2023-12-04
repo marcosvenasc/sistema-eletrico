@@ -1,5 +1,6 @@
 export const ADD_GERADOR = 'ADD_GERADOR';
 export const REMOVE_GERADOR = 'REMOVE_GERADOR';
+export const EDIT_GERADOR = 'EDIT_GERADOR';
 
 export interface Gerador {
   id: string;
@@ -20,4 +21,11 @@ export interface RemoveGeradorAction {
   payload: string;
 }
 
-export type GeradoresActionTypes = AddGeradorAction | RemoveGeradorAction;
+export interface EditGeradorAction {
+  type: typeof EDIT_GERADOR;
+  payload: {
+    geradorId: string;
+    novoNome: string;
+  }};
+
+export type GeradoresAction = AddGeradorAction | RemoveGeradorAction | EditGeradorAction;

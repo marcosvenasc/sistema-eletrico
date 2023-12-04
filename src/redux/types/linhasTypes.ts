@@ -1,8 +1,12 @@
+import { Barra } from "./barrasTypes";
+
 export const ADD_LINHA = 'ADD_LINHA';
 export const REMOVE_LINHA = 'REMOVE_LINHA';
 
 export interface Linha {
   id: string;
+  barraDe: Barra,
+  barraPara: Barra,
   numero: number;
 }
 

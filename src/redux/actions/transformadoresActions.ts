@@ -1,4 +1,4 @@
-import { ADD_TRANSFORMADOR, REMOVE_TRANSFORMADOR, Transformador, AddTransformadorAction, RemoveTransformadorAction } from '../types/transformadoresType';
+import { ADD_TRANSFORMADOR, REMOVE_TRANSFORMADOR, Transformador, AddTransformadorAction, RemoveTransformadorAction } from '../types/transformadoresTypes';
 
 export const addTransformador = (transformador: Transformador): AddTransformadorAction => ({
   type: ADD_TRANSFORMADOR,

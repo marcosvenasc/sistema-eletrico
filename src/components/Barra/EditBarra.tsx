@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { editBarra } from '../../redux/actions/barrasActions';
-import { Barra } from '../../redux/types/barrasTyes';
+import { Barra } from '../../redux/types/barrasTypes';
 
 interface EditBarraProps {
   barras: Barra[];

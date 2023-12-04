@@ -1,4 +1,4 @@
-import { ADD_BARRA, REMOVE_BARRA, BarrasState, BarrasActionTypes } from '../types/barrasTyes';
+import { ADD_BARRA, REMOVE_BARRA, BarrasState, BarrasActionTypes } from '../types/barrasTypes';
 
 const initialState: BarrasState = {
   barras: [],

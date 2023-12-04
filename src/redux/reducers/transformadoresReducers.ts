@@ -1,4 +1,4 @@
-import { ADD_TRANSFORMADOR, REMOVE_TRANSFORMADOR, TransformadorState, TransformadoresActionTypes } from '../types/transformadoresType';
+import { ADD_TRANSFORMADOR, REMOVE_TRANSFORMADOR, TransformadorState, TransformadoresActionTypes } from '../types/transformadoresTypes';
 
 const initialState: TransformadorState = {
   transformadores: [],

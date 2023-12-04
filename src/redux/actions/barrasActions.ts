@@ -1,4 +1,4 @@
-import { ADD_BARRA, REMOVE_BARRA, Barra, AddBarraAction, RemoveBarraAction } from '../types/barrasTyes';
+import { ADD_BARRA, REMOVE_BARRA, Barra, AddBarraAction, RemoveBarraAction } from '../types/barrasTypes';
 
 export const addBarra = (barra: Barra): AddBarraAction => ({
   type: ADD_BARRA,

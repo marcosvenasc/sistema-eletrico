@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Barra } from '../../redux/types/barrasTyes';
+import { Barra } from '../../redux/types/barrasTypes';
 
 interface ViewBarraProps {
   barra: Barra | null; 
@@ -16,7 +16,6 @@ const ViewBarra: React.FC<ViewBarraProps> = ({ barra }) => {
       <h2>Detalhes da Barra</h2>
       <p>ID: {barra.id}</p>
       <p>Número: {barra.numero}</p>
-      {/* Adicione outros detalhes da barra conforme necessário */}
     </div>
   );
 };
